@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="./signup.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginTab = document.querySelector('.tab.login');
+      const signupTab = document.querySelector('.tab.signup');
+
+      loginTab.addEventListener('click', function () {
+        window.location.href = 'login.html';
+      });
+
+      signupTab.addEventListener('click', function () {
+        signupTab.classList.add('active');
+        loginTab.classList.remove('active');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="signup-container">
+    <h1 class="logo">DUGOUT</h1>
+
+    <div class="tab-buttons">
+      <button class="tab login">로그인</button>
+      <button class="tab signup active">회원가입</button>
+    </div>
+
+    <form class="signup-form">
+      <label>닉네임
+        <div class="input-wrap">
+          <input type="text" placeholder="추후 변경 불가" />
+          <button type="button" class="check-btn">중복확인</button>
+        </div>
+      </label>
+
+      <label>아이디
+        <div class="input-wrap">
+          <input type="text" placeholder="추후 변경 불가" />
+          <button type="button" class="check-btn">사용가능</button>
+        </div>
+      </label>
+
+      <label>비밀번호
+        <div class="input-wrap">
+          <input type="password" placeholder="숫자 및 특수문자 포함 7자 이상" />
+          <span class="icon">👁️‍🗨️</span>
+        </div>
+      </label>
+
+      <label>핸드폰 번호
+        <div class="input-wrap">
+          <input type="text" placeholder="번호만 입력" />
+        </div>
+      </label>
+
+      <label>이메일
+        <div class="input-wrap">
+          <input type="email" />
+        </div>
+      </label>
+
+      <label>구단 선택
+        <div class="input-wrap">
+          <select>
+            <option disabled selected>추후 변경 불가</option>
+            <option>KIA 타이거즈</option>
+            <option>삼성 라이온즈</option>
+            <option>LG 트윈스</option>
+            <option>두산 베어스</option>
+            <option>KT 위즈</option>
+            <option>SSG 랜더스</option>
+            <option>롯데 자이언츠</option>
+            <option>한화 이글스</option>
+            <option>NC 다이노스</option>
+            <option>키움 히어로즈</option>
+          </select>
+        </div>
+      </label>
+
+      <div class="social-icons">
+        <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />
+        <img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" />
+      </div>
+
+      <button type="submit" class="submit-btn">회원가입</button>
+    </form>
+  </div>
+</body>
+</html>

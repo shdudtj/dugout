@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DUGOUT</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">DUGOUT</div>
+
+      <div class="profile">
+        <img src="https://via.placeholder.com/120" alt="프로필 사진" class="profile-img">
+        <div class="nickname">닉네임</div>
+        <div class="auth-buttons">
+          <button onclick="openPopup('/Users/nohyoungseo/DUGOUT/dugout/user/signup.html')">회원가입</button>
+          <button onclick="openPopup('/Users/nohyoungseo/DUGOUT/dugout/user/login.html')">로그인</button>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="#">게시판</a>
+        <div class="tooltip-container">
+          <a href="#">나의 활동</a>
+          <div class="tooltip">로그인이 필요합니다</div>
+        </div>
+        <a href="#">경기 일정</a>
+        <a href="#">구단 순위</a>
+        <a href="#">팀 정보</a>
+        <a href="#">선수 정보</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- 메인 콘텐츠 -->
+    </main>
+  </div>
+
+  <script>
+    function openPopup(file) {
+    window.open(file, '_blank', 'width=440,height=900,top=100,left=100,scrollbars=yes,resizable=no');
+    }
+  </script>  
+</body>
+</html>
