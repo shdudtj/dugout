@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <title>DUGOUT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="main.css" />
-  <script src="main.js" defer></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/main.css" />
+  <script src="/main/main.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -18,23 +20,23 @@
         <div class="nickname">닉네임</div>
 
         <div class="auth-buttons">
-          <button onclick="openPopup('/user/signup.html')">회원가입</button>
-          <button onclick="openPopup('/user/login.html')">로그인</button>
+          <button onclick="openPopup('/pages/signup/signup.html')">회원가입</button>
+          <button onclick="openPopup('/pages/login/login.html')">로그인</button>
         </div>
       </div>
 
       <nav class="menu">
-        <a href="#" data-page="/pages/board.html" class="menu-link active">게시판</a>
+        <a href="#" data-page="/pages/board/board.html" class="menu-link active">게시판</a>
 
         <div class="tooltip-container">
           <a href="#" class="menu-link disabled">나의 활동</a>
           <div class="tooltip">로그인이 필요합니다</div>
         </div>
 
-        <a href="#" data-page="schedule.html" class="menu-link">경기 일정</a>
-        <a href="#" data-page="ranking.html" class="menu-link">구단 순위</a>
-        <a href="#" data-page="teams.html" class="menu-link">팀 정보</a>
-        <a href="#" data-page="players.html" class="menu-link">선수 정보</a>
+        <a href="#" data-page="#" class="menu-link">경기 일정</a>
+        <a href="#" data-page="#" class="menu-link">구단 순위</a>
+        <a href="#" data-page="#" class="menu-link">팀 정보</a>
+        <a href="#" data-page="#" class="menu-link">선수 정보</a>
       </nav>
     </aside>
 
@@ -47,7 +49,7 @@
           <input type="text" placeholder="게시글 검색" />
         </div>
 
-        <button class="write-fab" title="글쓰기" onclick="loadPage('../pages/write.html')">
+        <button class="write-fab" title="글쓰기" onclick="loadPage('/pages/write/write.html')">
           ✏️
         </button>
       </div>
@@ -93,7 +95,7 @@
     }
 
     // 첫 로드 시 게시판 표시
-    document.addEventListener('DOMContentLoaded', () => loadPage('pages/board.html'));
+    document.addEventListener('DOMContentLoaded', () => loadPage('/pages/board.html'));
   </script>
 </body>
 </html>

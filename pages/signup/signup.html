@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>회원가입</title>
-  <link rel="stylesheet" href="./signup.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/signup.css" />
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const loginTab = document.querySelector('.tab.login');
       const signupTab = document.querySelector('.tab.signup');
 
       loginTab.addEventListener('click', function () {
-        window.location.href = '/user/login.html';
+        window.location.href = '/pages/login/login.html';
       });
 
       signupTab.addEventListener('click', function () {

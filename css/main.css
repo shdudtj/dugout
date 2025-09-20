@@ -1,6 +1,6 @@
 /* 기본 */
 * { box-sizing: border-box; }
-html, body { margin: 0; height: 100%; font-family: Arial, sans-serif; background: #f4f4fa; color: #002561; }
+html, body { margin: 0; height: 100%; font-family: 'KBOFont', sans-serif; background: #f4f4fa; color: #002561; }
 
 /* 컨테이너 */
 .container { display: flex; height: 100vh; }

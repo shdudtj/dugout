@@ -24,6 +24,7 @@
   
   /* 본문 입력 */
   .write-body {
+    font-family: 'KBOFont', sans-serif;
     min-height: 240px;
     font-size: 15px;
     padding: 16px;
