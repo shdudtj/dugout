@@ -13,5 +13,5 @@ https://www.notion.so/shdudtj902/1dc8da845b0580f3b415e637746afcb0?v=1dc8da845b05
 4. <팀 정보> 내용 추가 <br>
 5. 테이블 설계서에 추가하고 싶은 기능 - ex. 승패 게임 
 
-<h3> WBS </h3>
+<h3> 💡 WBS </h3>
 https://1drv.ms/x/c/74a24aec6e23aeee/EYCs3_LhL6dBtF1gKtT7_ZMBEsWa4UMjH2BeGr5gsluHaw
