@@ -445,3 +445,129 @@ html, body {
   background-color: #fff8e1;
   font-weight: bold;
 }
+
+/* team.html */
+.team-info-container {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.team-info-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002561;
+  margin-bottom: 20px;
+}
+
+.team-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-info-table th,
+.team-info-table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #d0d4da;
+  font-size: 16px;
+}
+
+.team-info-table th {
+  background-color: #e6e9f0;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* player.html */
+/* 선수 정보 전체 컨테이너 */
+.player-info-container {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+/* 구단 선택 안내 문구 */
+.team-selector {
+  margin-bottom: 24px;
+}
+
+.selector-guide {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* 구단 로고 버튼 리스트 */
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.team-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.team-btn:hover {
+  transform: scale(1.05);
+  background-color: #f0f4ff;
+}
+
+.team-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* 선수 테이블 제목 */
+.player-info-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002561;
+  margin-bottom: 20px;
+}
+
+/* 선수 테이블 */
+.player-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.player-info-table th,
+.player-info-table td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #d0d4da;
+  font-size: 15px;
+}
+
+.player-info-table th {
+  background-color: #e6e9f0;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-info-table a {
+  color: #002561;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.player-info-table a:hover {
+  text-decoration: underline;
+}
