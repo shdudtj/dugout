@@ -1,0 +1,39 @@
+  <div class="schedule-container">
+    <h2 class="schedule-title">KBO 경기 일정</h2>
+  
+    <header class="schedule-header">
+      <button class="nav-btn" onclick="prevMonth()">◀</button>
+      <h3 class="month-title">2025년 6월</h3>
+      <button class="nav-btn" onclick="nextMonth()">▶</button>
+    </header>
+  
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="empty"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td class="selected">13</td></tr>
+      </tbody>
+    </table>
+  
+    <div class="game-list">
+      <div class="game-item">18:30 | <strong>키움 vs 두산</strong> | 잠실</div>
+      <div class="game-item">18:30 | <strong>롯데 vs SSG</strong> | 문학</div>
+      <div class="game-item">18:30 | <strong>KT vs 삼성</strong> | 대구</div>
+      <div class="game-item">18:30 | <strong>KIA vs NC</strong> | 창원</div>
+      <div class="game-item">18:30 | <strong>LG vs 한화</strong> | 대전(원정)</div>
+    </div>
+  </div>
+  
+  <script>
+    function prevMonth() {
+      alert("이전 달로 이동 예정");
+    }
+    function nextMonth() {
+      alert("다음 달로 이동 예정");
+    }
+  </script>
+  

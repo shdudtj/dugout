@@ -33,8 +33,8 @@
           <div class="tooltip">로그인이 필요합니다</div>
         </div>
 
-        <a href="#" data-page="#" class="menu-link">경기 일정</a>
-        <a href="#" data-page="#" class="menu-link">구단 순위</a>
+        <a href="#" data-page="/pages/schedule/schedule.html" class="menu-link">경기 일정</a>
+        <a href="#" data-page="/pages/ranking/ranking.html" class="menu-link">구단 순위</a>
         <a href="#" data-page="#" class="menu-link">팀 정보</a>
         <a href="#" data-page="#" class="menu-link">선수 정보</a>
       </nav>
@@ -95,7 +95,7 @@
     }
 
     // 첫 로드 시 게시판 표시
-    document.addEventListener('DOMContentLoaded', () => loadPage('/pages/board.html'));
+  document.addEventListener('DOMContentLoaded', () => loadPage('/pages/board/board.html'));
   </script>
 </body>
 </html>
