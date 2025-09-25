@@ -17,5 +17,5 @@ https://www.notion.so/shdudtj902/1dc8da845b0580f3b415e637746afcb0?v=1dc8da845b05
 https://1drv.ms/x/c/74a24aec6e23aeee/EYCs3_LhL6dBtF1gKtT7_ZMBEsWa4UMjH2BeGr5gsluHaw
 
 <h3> 🔁 추가 내용 </h3>
-9/25에 커밋된 화면들(경기일정, 구단순위 등)은 샘플 데이터가 전무하므로 예시로 만들어진 것입니다.
+9/25에 커밋된 화면들(경기일정, 구단순위 등)은 샘플 데이터가 전무하므로 예시로 만들어진 것입니다. <br>
 <팀 정보> 및 <선수 정보> 화면에 구단 이름은 ALT로, 실제 화면에서는 구단 로고 이미지가 삽입될 예정입니다.
