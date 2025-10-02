@@ -6,12 +6,11 @@ https://www.notion.so/shdudtj902/1dc8da845b0580f3b415e637746afcb0?v=1dc8da845b05
 
 <h3> 💡 테이블설계서 </h3>
 
-<h3> 💀 회의가 필요한 내용 </h3>
+<h3> 💀 이후 추가할 내용 </h3>
 1. SNS 로그인 연동할 서비스 결정 <br>
-2. <내가 쓴 댓글> 에서 댓글 클릭 시, 원게시글 로딩되게? <br>
+2. <내가 쓴 댓글> 에서 댓글 클릭 시, 원게시글 로딩되게 x <br>
 3. <선수 정보> 업데이트 주기 - 주1회 (야없날 월요일 예정) <br>
-4. <팀 정보> 내용 추가 <br>
-5. 테이블 설계서에 추가하고 싶은 기능 - ex. 승패 게임 
+4. <팀 정보>에서 로고 클릭 시, KBO 팀 정보 페이지로 연결? <br>
 
 <h3> 💡 WBS </h3>
 https://1drv.ms/x/c/74a24aec6e23aeee/EYCs3_LhL6dBtF1gKtT7_ZMBEsWa4UMjH2BeGr5gsluHaw
