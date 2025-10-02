@@ -5,7 +5,7 @@ https://www.notion.so/shdudtj902/1dc8da845b0580f3b415e637746afcb0?v=1dc8da845b05
 파일로 업로드 완료
 
 <h3> 💡 테이블설계서 </h3>
-![Image](https://github.com/user-attachments/assets/2e00e08c-e97c-48fa-b9ad-6931985ff377)
+![Image] (https://github.com/user-attachments/assets/2e00e08c-e97c-48fa-b9ad-6931985ff377)
 
 <h3> 💀 이후 추가할 내용 </h3>
 1. SNS 로그인 연동할 서비스 결정 <br>
