@@ -4,57 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>로그인</title>
+
+  <!-- 구글 Material Icons 사용 -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- 커스텀 폰트 및 로그인 전용 스타일시트 -->
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/login.css" />
+
   <script>
+    /**
+     * 로그인/회원가입 탭 전환 처리
+     * - DOMContentLoaded 시점에 탭 버튼에 클릭 이벤트 등록
+     * - 회원가입 탭 클릭 시 회원가입 페이지로 이동
+     * - 로그인 탭 클릭 시 해당 탭에 active 클래스 부여
+     * - 서버 요청은 발생하지 않으며, 클라이언트 내 라우팅 처리
+     */
     document.addEventListener('DOMContentLoaded', function () {
       const loginTab = document.querySelector('.tab.login');
       const signupTab = document.querySelector('.tab.signup');
 
       signupTab.addEventListener('click', function () {
-        window.location.href = '/pages/signup/signup.html';
+        window.location.href = '/pages/signup/signup.html'; // 회원가입 페이지로 이동
       });
 
       loginTab.addEventListener('click', function () {
-        loginTab.classList.add('active');
-        signupTab.classList.remove('active');
+        loginTab.classList.add('active');       // 로그인 탭 활성화
+        signupTab.classList.remove('active');   // 회원가입 탭 비활성화
       });
     });
   </script>
 </head>
 <body>
+  <!-- 로그인 전체 컨테이너 -->
   <div class="login-container">
+    <!-- 로고 영역 -->
     <h1 class="logo">DUGOUT</h1>
 
+    <!-- 로그인/회원가입 탭 버튼 -->
     <div class="tab-buttons">
-      <button class="tab login active">로그인</button>
-      <button class="tab signup">회원가입</button>
+      <button class="tab login active">로그인</button>     <!-- 현재 활성화된 탭 -->
+      <button class="tab signup">회원가입</button>         <!-- 클릭 시 회원가입 페이지로 이동 -->
     </div>
 
+    <!-- 로그인 입력 폼 -->
     <form class="login-form">
+      <!-- 아이디 입력 -->
       <label>아이디
         <div class="input-wrap">
           <input type="text" placeholder="" />
         </div>
       </label>
 
+      <!-- 비밀번호 입력 -->
       <label>비밀번호
         <div class="input-wrap">
           <input type="password" placeholder="숫자 및 특수문자 포함 7자 이상" />
-          <span class="icon">👁️‍🗨️</span>
+          <span class="icon">👁️‍🗨️</span> <!-- 비밀번호 보기 아이콘 (기능은 아직 없음) -->
         </div>
       </label>
 
+      <!-- 아이디/비밀번호 찾기 링크 -->
       <div class="find-links">
         <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a>
       </div>
 
+      <!-- 소셜 로그인 아이콘 (기능은 아직 없음) -->
       <div class="social-icons">
         <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />
         <img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" />
       </div>
 
+      <!-- 로그인 버튼 -->
       <button type="submit" class="submit-btn">로그인</button>
     </form>
   </div>

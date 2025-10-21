@@ -304,67 +304,36 @@ html, body {
   font-weight: 700; 
 }
 
-/* schedule.html */
+/*schedule.html */
+/* schedule-container */
 .schedule-container {
   padding: 24px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  margin-top: 20px;
 }
 
 .schedule-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #002561;
-  margin-bottom: 4px;
-}
-
-.schedule-sub {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.schedule-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 16px;
-}
-
-.month-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #002561;
-}
-
-.nav-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: #002561;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.nav-btn:hover {
-  transform: scale(1.1);
+  display: flex;
+  align-items: center;
 }
 
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 
 .schedule-table th,
 .schedule-table td {
-  width: 14.28%;
   text-align: center;
   padding: 12px;
   border: 1px solid #d0d4da;
-  font-size: 16px;
-  background-color: #f9f9fc;
+  font-size: 15px;
 }
 
 .schedule-table th {
@@ -373,32 +342,17 @@ html, body {
   color: #333;
 }
 
-.schedule-table td.empty {
-  background-color: #f0f2f5;
+.schedule-table tbody tr:hover {
+  background-color: #f5f8ff;
 }
 
-.schedule-table td.selected {
-  background-color: #e0f0ff;
+.schedule-table a {
   color: #0077cc;
-  font-weight: bold;
-  border: 2px solid #0077cc;
+  text-decoration: none;
 }
 
-.game-list {
-  padding: 16px;
-  background-color: #f8f9fb;
-  border-radius: 8px;
-  border: 1px solid #d0d4da;
-}
-
-.game-item {
-  font-size: 15px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.game-item strong {
-  color: #002561;
+.schedule-table a:hover {
+  text-decoration: underline;
 }
 
 /* ranking.html */
@@ -447,18 +401,24 @@ html, body {
 }
 
 /* team.html */
+/* 팀 정보 테이블 */
 .team-info-container {
   padding: 24px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team-info-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #002561;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .team-info-table {
@@ -471,7 +431,7 @@ html, body {
   text-align: center;
   padding: 12px;
   border: 1px solid #d0d4da;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .team-info-table th {
@@ -480,10 +440,54 @@ html, body {
   color: #333;
 }
 
-.team-logo {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
+.team-name {
+  color: #002561;
+  font-weight: bold;
+  cursor: pointer;
+}
+.team-name:hover {
+  text-decoration: underline;
+}
+
+/* 팝업 오버레이 */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* JS에서 flex로 바뀜 */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 팝업 콘텐츠 */
+.popup-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 팝업 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* player.html */

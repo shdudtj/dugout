@@ -4,72 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>회원가입</title>
+
+  <!-- 구글 Material Icons 사용 -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- 커스텀 폰트 및 회원가입 전용 스타일시트 -->
   <link rel="stylesheet" href="/css/fonts.css" />
   <link rel="stylesheet" href="/css/signup.css" />
+
   <script>
+    /**
+     * 로그인/회원가입 탭 전환 처리
+     * - DOMContentLoaded 시점에 탭 버튼에 클릭 이벤트 등록
+     * - 로그인 탭 클릭 시 로그인 페이지로 이동
+     * - 회원가입 탭 클릭 시 해당 탭에 active 클래스 부여
+     * - 서버 요청은 발생하지 않으며, 클라이언트 내 라우팅 처리
+     */
     document.addEventListener('DOMContentLoaded', function () {
       const loginTab = document.querySelector('.tab.login');
       const signupTab = document.querySelector('.tab.signup');
 
       loginTab.addEventListener('click', function () {
-        window.location.href = '/pages/login/login.html';
+        window.location.href = '/pages/login/login.html'; // 로그인 페이지로 이동
       });
 
       signupTab.addEventListener('click', function () {
-        signupTab.classList.add('active');
-        loginTab.classList.remove('active');
+        signupTab.classList.add('active');       // 회원가입 탭 활성화
+        loginTab.classList.remove('active');     // 로그인 탭 비활성화
       });
     });
   </script>
 </head>
 <body>
+  <!-- 회원가입 전체 컨테이너 -->
   <div class="signup-container">
+    <!-- 로고 영역 -->
     <h1 class="logo">DUGOUT</h1>
 
+    <!-- 로그인/회원가입 탭 버튼 -->
     <div class="tab-buttons">
-      <button class="tab login">로그인</button>
-      <button class="tab signup active">회원가입</button>
+      <button class="tab login">로그인</button>             <!-- 클릭 시 로그인 페이지로 이동 -->
+      <button class="tab signup active">회원가입</button>   <!-- 현재 활성화된 탭 -->
     </div>
 
+    <!-- 회원가입 입력 폼 -->
     <form class="signup-form">
+      <!-- 닉네임 입력 -->
       <label>닉네임
         <div class="input-wrap">
           <input type="text" placeholder="추후 변경 불가" />
-          <button type="button" class="check-btn">중복확인</button>
+          <button type="button" class="check-btn">중복확인</button> <!-- 닉네임 중복 확인 버튼 -->
         </div>
       </label>
 
+      <!-- 아이디 입력 -->
       <label>아이디
         <div class="input-wrap">
           <input type="text" placeholder="추후 변경 불가" />
-          <button type="button" class="check-btn">사용가능</button>
+          <button type="button" class="check-btn">사용가능</button> <!-- 아이디 사용 가능 여부 확인 버튼 -->
         </div>
       </label>
 
+      <!-- 비밀번호 입력 -->
       <label>비밀번호
         <div class="input-wrap">
           <input type="password" placeholder="숫자 및 특수문자 포함 7자 이상" />
-          <span class="icon">👁️‍🗨️</span>
+          <span class="icon">👁️‍🗨️</span> <!-- 비밀번호 보기 아이콘 (기능은 아직 없음) -->
         </div>
       </label>
 
+      <!-- 핸드폰 번호 입력 -->
       <label>핸드폰 번호
         <div class="input-wrap">
           <input type="text" placeholder="번호만 입력" />
         </div>
       </label>
 
+      <!-- 이메일 입력 -->
       <label>이메일
         <div class="input-wrap">
           <input type="email" />
         </div>
       </label>
 
+      <!-- 구단 선택 드롭다운 -->
       <label>구단 선택
         <div class="input-wrap">
           <select>
-            <option disabled selected>추후 변경 불가</option>
+            <option disabled selected>추후 변경 불가</option> <!-- 기본 안내 문구 -->
             <option>KIA 타이거즈</option>
             <option>삼성 라이온즈</option>
             <option>LG 트윈스</option>
@@ -84,11 +106,13 @@
         </div>
       </label>
 
+      <!-- 소셜 로그인 아이콘 (기능은 아직 없음) -->
       <div class="social-icons">
         <img src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram" />
         <img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" />
       </div>
 
+      <!-- 회원가입 제출 버튼 -->
       <button type="submit" class="submit-btn">회원가입</button>
     </form>
   </div>

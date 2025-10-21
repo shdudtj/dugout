@@ -4,35 +4,47 @@
   <meta charset="UTF-8" />
   <title>DUGOUT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 구글 아이콘 폰트 로딩 -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- 커스텀 폰트 및 스타일시트 연결 -->
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- 메인 JS 로직 연결 (SPA 라우팅 및 팝업 처리 포함) -->
   <script src="/main/main.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <!-- 사이드바 -->
+    <!-- 사이드바: 사용자 정보 및 메뉴 -->
     <aside class="sidebar">
       <div class="logo">DUGOUT</div>
 
+      <!-- 사용자 프로필 영역 -->
       <div class="profile">
         <div class="profile-img"></div>
         <div class="nickname">닉네임</div>
 
+        <!-- 인증 관련 버튼 (팝업으로 회원가입/로그인 페이지 열림) -->
         <div class="auth-buttons">
           <button onclick="openPopup('/pages/signup/signup.html')">회원가입</button>
           <button onclick="openPopup('/pages/login/login.html')">로그인</button>
         </div>
       </div>
 
+      <!-- 메뉴: SPA 구조로 각 페이지를 fetch로 로드 -->
       <nav class="menu">
+        <!-- data-page 속성: 클릭 시 해당 HTML을 fetch로 불러옴 -->
         <a href="#" data-page="/pages/board/board.html" class="menu-link active">게시판</a>
 
+        <!-- 로그인 필요 메뉴: 비활성화 상태 + 툴팁 표시 -->
         <div class="tooltip-container">
           <a href="#" class="menu-link disabled">나의 활동</a>
           <div class="tooltip">로그인이 필요합니다</div>
         </div>
 
+        <!-- 기타 페이지: 경기 일정, 구단 순위, 팀 정보, 선수 정보 -->
         <a href="#" data-page="/pages/schedule/schedule.html" class="menu-link">경기 일정</a>
         <a href="#" data-page="/pages/ranking/ranking.html" class="menu-link">구단 순위</a>
         <a href="#" data-page="/pages/team/team.html" class="menu-link">팀 정보</a>
@@ -40,24 +52,25 @@
       </nav>
     </aside>
 
-    <!-- 메인 영역 -->
+    <!-- 메인 콘텐츠 영역 -->
     <main class="main-content">
-      <!-- 상단 검색 + 글쓰기 버튼 (남색 원형 연필) -->
+      <!-- 상단 툴바: 검색창 + 글쓰기 버튼 -->
       <div class="board-toolbar">
         <div class="search">
           <span class="search-icon">🔍</span>
           <input type="text" placeholder="게시글 검색" />
         </div>
 
+        <!-- 글쓰기 버튼: write.html 페이지 로드 -->
         <button class="write-fab" title="글쓰기" onclick="loadPage('/pages/write/write.html')">
           ✏️
         </button>
       </div>
 
-      <!-- fetch로 들어오는 자리 -->
+      <!-- 실제 페이지 콘텐츠가 삽입되는 영역 -->
       <section id="main-view" class="view"></section>
 
-      <!-- 페이지네이션 예시 -->
+      <!-- 페이지네이션 UI (예시용) -->
       <div class="pagination">
         <button class="page-btn">&lsaquo;</button>
         <span class="page-indicator">1 of 6</span>
@@ -67,35 +80,49 @@
   </div>
 
   <script>
-    // 사이드바 메뉴 클릭 -> 메인에 HTML 조각 로드
+    // 사이드바 메뉴 클릭 시 해당 페이지를 fetch로 불러와 main-view에 삽입
     document.addEventListener('click', (e) => {
       const link = e.target.closest('[data-page]');
       if (!link) return;
       e.preventDefault();
       const page = link.getAttribute('data-page');
-      setActive(link);
-      loadPage(page);
+      setActive(link);     // 메뉴 활성화 표시
+      loadPage(page);      // 페이지 로딩
     });
 
+    // 현재 클릭된 메뉴에 active 클래스 부여
     function setActive(linkEl) {
       document.querySelectorAll('.menu-link').forEach(a => a.classList.remove('active'));
       linkEl.classList.add('active');
     }
 
+    // 페이지 로딩 함수: fetch로 HTML 조각을 불러와 main-view에 삽입
     function loadPage(page) {
       fetch(page)
         .then(r => r.ok ? r.text() : Promise.reject(r.status))
-        .then(html => { document.getElementById('main-view').innerHTML = html; })
-        .catch(() => { document.getElementById('main-view').innerHTML = '<p>콘텐츠를 불러오지 못했습니다.</p>'; });
+        .then(html => {
+          document.getElementById('main-view').innerHTML = html;
+
+          // 특정 페이지 로딩 시 필요한 JS 파일을 동적으로 로드할 수 있음
+          if (page.includes('team.html')) {
+            const script = document.createElement('script');
+            script.src = '/pages/team/team.js';
+            script.defer = true;
+            document.body.appendChild(script);
+          }
+        })
+        .catch(() => {
+          document.getElementById('main-view').innerHTML = '<p>콘텐츠를 불러오지 못했습니다.</p>';
+        });
     }
 
-    // 팝업(새창) – 로그인/회원가입 전용
+    // 팝업 창 열기: 회원가입/로그인 페이지를 새 창으로 띄움
     function openPopup(url) {
       window.open(url, '_blank', 'width=420,height=720,menubar=no,toolbar=no,location=no,status=no');
     }
 
-    // 첫 로드 시 게시판 표시
-  document.addEventListener('DOMContentLoaded', () => loadPage('/pages/board/board.html'));
+    // 초기 로딩 시 게시판 페이지 자동 표시
+    document.addEventListener('DOMContentLoaded', () => loadPage('/pages/board/board.html'));
   </script>
 </body>
 </html>
