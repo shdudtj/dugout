@@ -1,0 +1,27 @@
+<!-- 나의 활동 페이지 -->
+<div class="activity-container">
+    <div class="activity-header">
+      <button class="activity-tab active" data-type="posts">게시글</button>
+      <button class="activity-tab" data-type="likes">좋아요</button>
+      <button class="activity-tab" data-type="liked-posts">좋아요 누른 게시글</button>
+    </div>
+  
+    <p class="activity-note">* 버튼을 클릭하면 해당 내용을 확인할 수 있습니다.</p>
+  
+    <div class="activity-content">
+      <div class="activity-box" id="activity-box">
+        <!-- 여기에 JS로 내용이 삽입됨 -->
+        <p class="placeholder">게시글을 불러오는 중입니다...</p>
+      </div>
+    </div>
+  
+    <div class="pagination">
+      <button class="page-btn">&lsaquo;</button>
+      <span class="page-indicator">1 of 6</span>
+      <button class="page-btn">&rsaquo;</button>
+    </div>
+  </div>
+  
+  <!-- JS 파일 연결 -->
+  <script src="/pages/activity/activity.js" defer></script>
+  
