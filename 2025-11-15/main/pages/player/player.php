@@ -71,16 +71,16 @@ if ($team_code) {
     <!-- 구단 선택 박스 -->
     <div class="team-selector">
       <div class="team-list">
-        <button class="team-btn" data-team-code="LG"><img src="/main/library/img/lg.png" alt="LG"></button>
-        <button class="team-btn" data-team-code="WO"><img src="/main/library/img/kiwoom.png" alt="키움"></button>
-        <button class="team-btn" data-team-code="LT"><img src="/main/library/img/lotte.png" alt="롯데"></button>
-        <button class="team-btn" data-team-code="SS"><img src="/main/library/img/samsung.png" alt="삼성"></button>
-        <button class="team-btn" data-team-code="KT"><img src="/main/library/img/kt.png" alt="KT"></button>
-        <button class="team-btn" data-team-code="SK"><img src="/main/library/img/ssg.png" alt="SSG"></button>
-        <button class="team-btn" data-team-code="HT"><img src="/main/library/img/kia.png" alt="KIA"></button>
-        <button class="team-btn" data-team-code="NC"><img src="/main/library/img/nc.png" alt="NC"></button>
-        <button class="team-btn" data-team-code="OB"><img src="/main/library/img/doosan.png" alt="두산"></button>
-        <button class="team-btn" data-team-code="HH"><img src="/main/library/img/hanwha.png" alt="한화"></button>
+        <button class="team-btn" data-team-code="LG">LG</button>
+        <button class="team-btn" data-team-code="WO">키움</button>
+        <button class="team-btn" data-team-code="LT">롯데</button>
+        <button class="team-btn" data-team-code="SS">삼성</button>
+        <button class="team-btn" data-team-code="KT">KT</button>
+        <button class="team-btn" data-team-code="SK">SSG</button>
+        <button class="team-btn" data-team-code="HT">KIA</button>
+        <button class="team-btn" data-team-code="NC">NC</button>
+        <button class="team-btn" data-team-code="OB">두산</button>
+        <button class="team-btn" data-team-code="HH">한화</button>
       </div>
     </div>
 
